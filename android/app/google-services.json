@@ -1,0 +1,70 @@
+{
+  "project_info": {
+    "project_number": "1060824201583",
+    "project_id": "e-tour-387007",
+    "storage_bucket": "e-tour-387007.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060824201583:android:2dae6417bf7f5d04d6509a",
+        "android_client_info": {
+          "package_name": "com.teamone.e_tour"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060824201583-b4r7cdk7g8gane8fu0d929t39haeah2a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.teamone.e_tour",
+            "certificate_hash": "fb2894fa92a71d89b087f3d71d7fed2b0e33b596"
+          }
+        },
+        {
+          "client_id": "1060824201583-hjq8eng8945fomulfkp2r9a38dqk80fg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.teamone.e_tour",
+            "certificate_hash": "5bf2dec5c6ef6e5436cdfdc755781c722a0e0305"
+          }
+        },
+        {
+          "client_id": "1060824201583-vi5vd339n5e0fcempdp50cbhgco01e3t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.teamone.e_tour",
+            "certificate_hash": "7370af2e574736d4d6dce535f387a7903faf8df7"
+          }
+        },
+        {
+          "client_id": "1060824201583-o7cn0284hm060erdjj9vjb87mnfjuh2b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrc0bvS54_ODHnIsUF_Je8KQKnf9C4zNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060824201583-4j66gss1l89t9pjhm1jfp359hgfpr7ek.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1060824201583-nao56pmb1tva7euhmdrnr6f8je9uk6ep.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.groupone.etour"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
