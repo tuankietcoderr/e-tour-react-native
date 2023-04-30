@@ -1,30 +1,67 @@
 {
   "expo": {
-    "name": "e-tour-react-native",
-    "slug": "e-tour-react-native",
+    "name": "E-Tour",
+    "slug": "e-tour",
     "version": "1.0.0",
+    "scheme": "com.groupone.etour",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.groupone.etour",
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "googleServicesFile": "./google-services.json",
+      "package": "com.teamone.e_tour"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsImpl": "mapbox",
+          "RNMapboxMapsDownloadToken": "sk.eyJ1IjoidHVhbmtpZXRjb2RlciIsImEiOiJjbGlzNnNhaWsxMXE3M2tueHhiaWd6anNuIn0.VlL6duoL7b5X0_XbRlJLpg"
+        }
+      ],
+      "@react-native-firebase/app",
+      "@react-native-google-signin/google-signin",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon-transparent.png",
+          "color": "#ffffff",
+          "backgroundColor": "#0068FF",
+          "androidMode": "collapse",
+          "androidCollapsedTitle": "E-Tour"
+        }
+      ]
+    ],
+    "notifications": {
+      "icon": "./assets/icon-transparent.png",
+      "color": "#ffffff",
+      "backgroundColor": "#0068FF",
+      "androidMode": "collapse",
+      "androidCollapsedTitle": "E-Tour"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "870f87ce-72c3-43ec-9a65-3da3143db349"
+      }
+    },
+    "owner": "tuankietcoder"
   }
 }
