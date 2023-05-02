@@ -1,0 +1,29 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@icons/*": ["./src/icons/*"],
+      "@components/*": ["./src/components/*"],
+      "@screens/*": ["./src/screens/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@types/*": ["./src/types/*"],
+      "@config/*": ["./src/config/*"],
+      "@navigation/*": ["./src/navigation/*"],
+      "@services/*": ["./src/services/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@i18n/*": ["./src/i18n/*"],
+      "@locales/*": ["./src/locales/*"],
+      "@store/*": ["./src/store/*"],
+      "@features/*": ["./src/store/features/*"],
+      "@schema/*": ["./src/schema/*"],
+      "@assets/*": ["./assets/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@context/*": ["./src/context/*"]
+    },
+    "noImplicitAny": false
+  }
+}
