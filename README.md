@@ -126,7 +126,7 @@ yarn start
 
 ## APK file
 
-[Download here](https://expo.dev/accounts/tuankietcoder/projects/e-tour/builds/69cc4818-02ce-4e01-b4a3-069be306cdc0)
+[Download here](https://expo.dev/accounts/tuankietcoder/projects/e-tour/builds/8d11845e-498c-4da8-a1a2-8405c028f82a)
 
 ## Contributors
 
