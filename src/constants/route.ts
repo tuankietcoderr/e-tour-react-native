@@ -1,4 +1,5 @@
 export enum ROUTES {
+  SEARCH = 'Search',
   ONBOARDING = 'Onboarding',
   HOME = 'Home',
   APP_PROVIDER = 'AppProvider',

@@ -143,7 +143,8 @@ const Profile = ({ navigation }: NativeStackScreenProps<any>) => {
                 ...styles.text,
               }}
             >
-              Phone: <Text style={styles.textSemibold}>{user.phoneNumber}</Text>
+              Phone:{' '}
+              <Text style={styles.textSemibold}>{user.phoneNumber || 'No phone number yet'}</Text>
             </Text>
             <Text
               style={{

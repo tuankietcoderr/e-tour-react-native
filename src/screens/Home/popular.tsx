@@ -52,6 +52,7 @@ const Popular = ({ navigation }: NativeStackScreenProps<any>) => {
                 key={index}
               >
                 <CommonCardHorizontally
+                  hideSaved
                   title={item.name}
                   // salePrice={500000}
                   originalPrice={item.reservationFee}

@@ -1,4 +1,4 @@
-import { View, Text, ActivityIndicator, FlatList } from 'react-native'
+import { View, Text, ActivityIndicator, FlatList, RefreshControl } from 'react-native'
 import React from 'react'
 import useHistory from '@hooks/socket/useHistory'
 import { PaymentStatus } from '@schema/User/Ticket'
@@ -8,7 +8,16 @@ import HistoryCard from '@components/HistoryCard'
 import Toast from 'react-native-root-toast'
 
 const PendingTicket = () => {
-  const { data, isError } = useHistory(1)
+  const { data, isError, refresh } = useHistory(1)
+  const [refreshing, setRefreshing] = React.useState(false)
+  React.useEffect(() => {
+    if (data) {
+      setRefreshing(false)
+    }
+    if (isError) {
+      setRefreshing(false)
+    }
+  }, [data, isError])
   React.useEffect(() => {
     if (isError) {
       Toast.show('Error when getting history', {
@@ -18,6 +27,12 @@ const PendingTicket = () => {
       })
     }
   }, [isError])
+
+  const onRefresh = React.useCallback(() => {
+    setRefreshing(true)
+    refresh()
+  }, [])
+
   return (
     <View>
       {data ? (
@@ -45,6 +60,7 @@ const PendingTicket = () => {
           contentContainerStyle={{
             paddingHorizontal: 20,
           }}
+          refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
         />
       ) : (
         <ActivityIndicator size={'large'} />

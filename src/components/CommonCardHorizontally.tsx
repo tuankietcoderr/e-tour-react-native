@@ -38,6 +38,7 @@ export interface CommonCardHorizontallyProps {
   hideTourType?: boolean
   route?: string[]
   id: string
+  hideSaved?: boolean
 }
 
 const CommonCardHorizontally = ({
@@ -50,6 +51,7 @@ const CommonCardHorizontally = ({
   reviewCount = 0,
   hideTourType = false,
   route = [],
+  hideSaved = false,
   ...props
 }: CommonCardHorizontallyProps) => {
   const { width } = useWindowDimensions()
@@ -136,11 +138,12 @@ const CommonCardHorizontally = ({
               }}
               onPress={handleSaveRoute}
             >
-              {!isSavedRoute ? (
-                <BookmarkIconOutline viewBox="0 0 13 13" width={24} height={24} color="#FFCD29" />
-              ) : (
-                <BookmarkIconFill viewBox="0 0 13 13" width={24} height={24} color="#FFCD29" />
-              )}
+              {!hideSaved &&
+                (!isSavedRoute ? (
+                  <BookmarkIconOutline viewBox="0 0 13 13" width={24} height={24} color="#FFCD29" />
+                ) : (
+                  <BookmarkIconFill viewBox="0 0 13 13" width={24} height={24} color="#FFCD29" />
+                ))}
             </TouchableOpacity>
           </View>
           <View

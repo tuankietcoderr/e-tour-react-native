@@ -36,7 +36,7 @@ const TopBar = () => {
           resizeMode="contain"
         />
       </View>
-      <View
+      <TouchableOpacity
         style={{
           flexDirection: 'row',
           backgroundColor: AppColors.white,
@@ -46,6 +46,7 @@ const TopBar = () => {
           borderRadius: 6,
           overflow: 'hidden',
         }}
+        onPress={() => navigation.navigate(ROUTES.SEARCH as never)}
       >
         <SearchIcon
           width={20}
@@ -64,8 +65,9 @@ const TopBar = () => {
             fontSize: AppFontSizes.body,
           }}
           placeholder="Discover new experiences"
+          editable={false}
         />
-      </View>
+      </TouchableOpacity>
       <TouchableOpacity
         style={{
           justifyContent: 'center',

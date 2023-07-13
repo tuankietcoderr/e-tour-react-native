@@ -7,7 +7,7 @@ export default function useHistory(num: number) {
   const [routes, setRoutes] = useState<Ticket[] | undefined>(undefined)
   const [error, setError] = useState(null)
 
-  useSocket(
+  const socket = useSocket(
     (socket) => {
       socket.emit('view-booked-ticket', { num })
       socket.on('booked-ticket-list', (data) => {
@@ -25,5 +25,9 @@ export default function useHistory(num: number) {
     [num]
   )
 
-  return { data: routes, isError: error !== null, error }
+  function refresh() {
+    socket?.emit('view-booked-ticket', { num })
+  }
+
+  return { data: routes, isError: error !== null, error, refresh }
 }

@@ -108,7 +108,7 @@ const TicketCard = (props: ITicketCardProps) => {
             paddingHorizontal: 20,
             paddingVertical: 6,
             borderRadius: 6,
-            opacity: isRender ? 1 : 0.7,
+            // opacity: isRender ? 1 : 0.7,
           }}
           onPress={handleOnPressBooking}
         >

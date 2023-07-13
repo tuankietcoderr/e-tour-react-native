@@ -49,6 +49,7 @@ const Notifications = ({ navigation }: NativeStackScreenProps<any>) => {
     const navigateTo = link?.[0] as NotificationNavigation
     const navigateId = link?.[link.length - 1].split('/').shift()
     data && !isRead && readNotification([notification._id])
+    console.log(link, navigateTo, navigateId)
     switch (navigateTo) {
       case NotificationNavigation.ROUTE:
         navigation.navigate(ROUTES.TOUR_DETAIL, { route_id: navigateId })
@@ -57,7 +58,6 @@ const Notifications = ({ navigation }: NativeStackScreenProps<any>) => {
         navigation.navigate(ROUTES.VOUCHER_DETAIL, { voucher_id: navigateId })
         break
       default:
-        navigation.navigate(ROUTES.TOUR_DETAIL, { route_id: navigateId })
         break
     }
   }

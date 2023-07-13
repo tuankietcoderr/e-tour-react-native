@@ -11,6 +11,7 @@ import useTicket from '@hooks/socket/useTicket'
 import { rateColorConverter, rateConverter } from '@lib/converter'
 import { RouteProp, useRoute } from '@react-navigation/core'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
+import { ReportType } from '@schema/User/Report'
 import { PaymentStatus, Ticket } from '@schema/User/Ticket'
 import { LinearGradient } from 'expo-linear-gradient'
 import moment from 'moment'
@@ -89,7 +90,10 @@ const HistoryTourDetail = ({ navigation }: NativeStackScreenProps<any>) => {
   }
 
   const handlePressReport = () => {
-    navigation.navigate(ROUTES.REPORT_TOUR, { tourId: ticket.tourId._id })
+    navigation.navigate(ROUTES.REPORT_TOUR, {
+      objectId: ticket.tourId._id,
+      reportType: ReportType.TOUR,
+    })
   }
 
   const handlePressDiscard = () => {}
