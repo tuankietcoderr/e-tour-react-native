@@ -11,7 +11,14 @@ export default function useHistory(num: number) {
     (socket) => {
       socket.emit('view-booked-ticket', { num })
       socket.on('booked-ticket-list', (data) => {
-        setRoutes(data.data)
+        // sort by date
+        setRoutes(
+          (data.data as Ticket[]).sort(
+            (a, b) =>
+              new Date(b?.createdAt || new Date()).getTime() -
+              new Date(a?.createdAt || new Date()).getTime()
+          )
+        )
       })
 
       socket.on('update-ticket-result', (data) => {

@@ -126,10 +126,4 @@ yarn start
 
 ## APK file
 
-[Download here](https://expo.dev/accounts/tuankietcoder/projects/e-tour/builds/8d11845e-498c-4da8-a1a2-8405c028f82a)
-
-## Contributors
-
-<a href="https://github.com/tuankietcoderr/e-tour-react-native/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=tuankietcoderr/e-tour-react-native" />
-</a>
+[Download here](https://expo.dev/accounts/tuankietcoder/projects/e-tour/builds/bd78362e-8658-4313-ba30-22cdafe0b04a)

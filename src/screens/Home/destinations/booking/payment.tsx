@@ -64,6 +64,9 @@ const Payment = ({ navigation }: NativeStackScreenProps<any>) => {
         backgroundColor: AppColors.error,
       })
     }
+    if (data) {
+      console.log({ data })
+    }
   }, [isError])
 
   const defaultCard = useAppSelector(selectDefaultCard)

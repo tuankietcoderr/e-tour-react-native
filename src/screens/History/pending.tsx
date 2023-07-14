@@ -6,18 +6,10 @@ import { AppFontSizes, AppFonts } from '@assets/themes/font'
 import { AppColors } from '@assets/themes/colors'
 import HistoryCard from '@components/HistoryCard'
 import Toast from 'react-native-root-toast'
+import { useFocusEffect } from '@react-navigation/core'
 
 const PendingTicket = () => {
   const { data, isError, refresh } = useHistory(1)
-  const [refreshing, setRefreshing] = React.useState(false)
-  React.useEffect(() => {
-    if (data) {
-      setRefreshing(false)
-    }
-    if (isError) {
-      setRefreshing(false)
-    }
-  }, [data, isError])
   React.useEffect(() => {
     if (isError) {
       Toast.show('Error when getting history', {
@@ -27,11 +19,6 @@ const PendingTicket = () => {
       })
     }
   }, [isError])
-
-  const onRefresh = React.useCallback(() => {
-    setRefreshing(true)
-    refresh()
-  }, [])
 
   return (
     <View>
@@ -60,7 +47,6 @@ const PendingTicket = () => {
           contentContainerStyle={{
             paddingHorizontal: 20,
           }}
-          refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
         />
       ) : (
         <ActivityIndicator size={'large'} />
