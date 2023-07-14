@@ -127,3 +127,7 @@ yarn start
 ## APK file
 
 [Download here](https://expo.dev/accounts/tuankietcoder/projects/e-tour/builds/bd78362e-8658-4313-ba30-22cdafe0b04a)
+
+## Others repositories
+1. Web management: https://e-tour-management.vercel.app/
+2. Web admin: https://e-tour-admin.vercel.app/
